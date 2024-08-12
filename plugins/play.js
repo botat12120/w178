@@ -18,7 +18,7 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     var res = await yts(text)
     var vid = res.videos[0]
     var q = '128kbps'
-const texto1 = `اغــنيــههة 💫 يـوتـيـوب\n
+const texto1 = `اغــنيــة 💫 يـوتـيـوب\n
 	🏠 *العنوان ∙* ${vid.title}\n
         💬 *المده ∙* ${vid.timestamp}\n
         ⛈️ *المشاهده ∙* ${vid.views}\n
@@ -29,11 +29,11 @@ const texto1 = `اغــنيــههة 💫 يـوتـيـوب\n
 await conn.sendButton(m.chat, texto1, wm, res.videos[0].thumbnail, [
 	['الصوت 💫', `${usedPrefix}mp3 ${text}`],
 	['الفيديو 🎥', `${usedPrefix}mp4 ${text}`]
-  ], null, [['قناتي 👾', `https://whatsapp.com/channel/0029ValKwOM0lwgjkCI6C71Y`]], m)
+  ], null, [['قروب ويتشر 👾', `https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90`]], m)
 	  }
   
             if (command == "mp3") {
-	 if (!text) return conn.reply(m.chat, `*🚩 حط عنون الفديو او الصوت الي انت طلبو يسطا *`, m)
+	 if (!text) return conn.reply(m.chat, `*🚩 حط عنون الفيديو او الصوت الي انت طلبته يبن الحلال *`, m)
 		
        try {
     const res = await yts(text)
@@ -82,7 +82,7 @@ thumbnail: await (await fetch(vid.thumbnail)).buffer()}}}, { quoted: m })
     }
         
         if (command == "mp4") {
-            if (!text) return conn.reply(m.chat, `*🚩فين يسطا الفديو او الصوت الي انت طلبو*`, m)
+            if (!text) return conn.reply(m.chat, `*🚩فين يبن الحلال الفيديو او الصوت الي انت طلبته*`, m)
     await m.react('🕓')
     let res = await yts(text)
     let vid = res.videos[0]
