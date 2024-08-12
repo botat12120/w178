@@ -24,12 +24,10 @@ let rtotalreg = Object.values(global.db.data.users).filter(user => user.register
 let more = String.fromCharCode(8206)
 let readMore = more.repeat(850)   
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
-let str = `⎔⋅• ━ ╼╃ ⌬〔﷽〕⌬ ╄╾ ━ •⋅⎔
+let str = `◉━━━─ •༺ ﷽ ༻• ─━━━◉
 > 𝙍𝙊𝘽 ↳🔰↲ 𝐁𝐎𝐓
 > 〔قـسـم الـبـحــث┊ ˼‏ 🔍˹ 〕↶
-*⌬∙ • ──╾⊱﹝🔰﹞⊰╼── • ∙⌬*
-            *روب بــ🦍ــوت*
-*⌬∙ • ──╾⊱﹝🔰﹞⊰╼── • ∙⌬*
+*◉━━━─ •༺ 🔰 ༻• ─━━━◉*
 > 🔍 .جوجل
 > 🔍 .بين
 > 🔍 .مانجا
@@ -37,10 +35,9 @@ let str = `⎔⋅• ━ ╼╃ ⌬〔﷽〕⌬ ╄╾ ━ •⋅⎔
 > 🔍 .اسم_الاغنية
 > 🔍 .بحث
 > 🔍 .صوره
-*⌬∙ • ──╾⊱﹝🔰﹞⊰╼── • ∙⌬*
 *~⌬ تــ✍︎ــوقــيــع ↡~*🖋️
 *⌞🔰┊𝙍𝙊𝘽  ス W.C.H┊🔰⌝*
-*⌬∙ • ──╾⊱﹝🔰﹞⊰╼── • ∙⌬*
+*◉━━━─ •༺ 🔰 ༻• ─━━━◉*
 `.trim()
    const _0x3c7cab = _0x5a1d;
 
