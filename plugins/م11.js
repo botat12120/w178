@@ -26,7 +26,6 @@ let readMore = more.repeat(850)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `◉━━━─ •༺ ﷽ ༻• ─━━━◉
 > 𝙍𝙊𝘽 ↳🔰↲ 𝐁𝐎𝐓
-*◉━━━─ •༺ 🔰 ༻• ─━━━◉*
 > 〔قـسـم الـمـشـرفـيـن┊ ˼‏ 🧑‍💻˹ 〕
 *◉━━━─ •༺ 🔰 ༻• ─━━━◉*
 > 🧑‍💻.ترقية
