@@ -28,7 +28,8 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   const Elsony = 'https://telegra.ph/file/b1d7db23103bcc9dd896d.jpg'
   const mentionId = m.key.participant || m.key.remoteJid;
  
-conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `
+conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `◉━━━─ •༺ 🔰 ༻• ─━━━◉ 
+*مرحبا بك* @user
 ◉━━━─ •༺ 🔰 ༻• ─━━━◉
 📮╎⌟ مـعلـومـات الــ🐺ـبـوت ⌜╎📮
 > •إســم الــبــوت: روب ستارك
