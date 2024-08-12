@@ -24,26 +24,26 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     let readMore = more.repeat(850);
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let taguser = '@' + m.sender.split("@s.whatsapp.net")[0];
-  await conn.sendMessage(m.chat, { react: { text: '🦍', key: m.key } })
+  await conn.sendMessage(m.chat, { react: { text: '🐺', key: m.key } })
   const Elsony = 'https://telegra.ph/file/b1d7db23103bcc9dd896d.jpg'
   const mentionId = m.key.participant || m.key.remoteJid;
  
 conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `*• ──╾⊱﹝🔰﹞⊰╼── •*
 *مــرحــبــا بــك/ي* @${mentionId.split('@')[0]}
 ◉━━━─ •༺ 🔰 ༻• ─━━━◉
-📮╎⌟ مـعلـومـات الــ🦍ـبـوت ⌜╎📮
+📮╎⌟ مـعلـومـات الــ🐺ـبـوت ⌜╎📮
 > •إســم الــبــوت: روب ستارك
 > •الــمــطــور : نقابة ويتشر
 > •مــدة الــتــشــغــيل : ${uptime}
-*• ──╾⊱﹝🔰﹞⊰╼── •*
+*◉━━━─⪻🔰⪼─━━━◉*
 📮╎⌟ مــعلـ🔰ـومــاتــك ⌜╎📮
 > •مــســتــواك : ${level}
-> •بــريــمــيــوم : ${user.premiumTime > 0 ? 'مــمـ🔰ـيز' : (isPrems ? 'مــمـ🔰ـيز' : 'عــ🦍ــادي') || ''}
+> •بــريــمــيــوم : ${user.premiumTime > 0 ? 'مــمـ🔰ـيز' : (isPrems ? 'مــمـ🔰ـيز' : 'عــ🐺ــادي') || ''}
 > •رتــبــتــك : ${role}
-*• ──╾⊱﹝🔰﹞⊰╼── •*
-*~⌬ تــ✍︎ــوقــيــع ↡~*🦍
-*⌞🔰┊ 𝙍𝙊𝘽 BOT ┊🔰⌝*
-*• ──╾⊱﹝🔰﹞⊰╼── •*
+*◉━━━─⪻🔰⪼─━━━◉*
+*~⌬ تــ✍︎ــوقــيــع ↡~*🐺
+*⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝*
+*◉━━━─⪻🔰⪼─━━━◉*
 > Copyright © 2024 روب`,subtitle: "Elsony",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},
                     contextInfo: {
                         mentionedJid: [m.sender],
