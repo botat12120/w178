@@ -14,7 +14,7 @@ handler.before = async function(m) {
       clearTimeout(this.tekateki[id][3]);
       delete this.tekateki[id];
     } else if (similarity(m.text.toLowerCase(), json.response.toLowerCase().trim()) >= threshold) m.reply(`*اقــتــربــت مــن الاجــابــة!*`);
-    else m.reply('*❐┃اجـابـة خـاطـئـة يــا غبـي┃❌ ❯*');
+    else m.reply('*❐┃الإجــابــة خــطــأ يــبــو الــشــبــاب┃❌ ❯*');
   }
   return !0;
 };
