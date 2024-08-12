@@ -29,7 +29,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   const mentionId = m.key.participant || m.key.remoteJid;
  
 conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `*• ──╾⊱﹝🔰﹞⊰╼── •*
-*مــرحــبــا بــك/ي* @${mentionId.split('@')[0]}
+*مــرحــبــا بــك* @${mentionId.split('@')[0]}
 ◉━━━─ •༺ 🔰 ༻• ─━━━◉
 📮╎⌟ مـعلـومـات الــ🐺ـبـوت ⌜╎📮
 > •إســم الــبــوت: روب ستارك
