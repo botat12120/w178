@@ -43,7 +43,7 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
 *◉━━━─⪻🔰⪼─━━━◉*
 *~⌬ تــ✍︎ــوقــيــع ↡~*🐺
 *⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝*
-*◉━━━─⪻🔰⪼─━━━◉*
+*◉━━━─ •༺ 🔰 ༻• ─━━━◉*
 > Copyright © 2024 𝐑𝐎𝐁 𝐊𝐒𝐀`,subtitle: "Elsony",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},
                     contextInfo: {
                         mentionedJid: [m.sender],
