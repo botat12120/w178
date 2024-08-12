@@ -1,12 +1,11 @@
 let handler = async m => m.reply(`
 
-≡  *Zenon↳🐢↲𝐁𝐎𝐓*
+≡  *ROB ↳🔰↲ 𝐁𝐎𝐓*
 
 _GROUP:_
 ─────────────
-▢ انضم إلى مجموعة البوت *العامة والدعم*
-https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq
-
+▢ انضم إلى مجموعة البوت *العامة *
+https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90
 ─────────────
 
 ▢ *YouTube*
