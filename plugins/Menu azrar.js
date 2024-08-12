@@ -32,15 +32,15 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
 *مــرحــبــا بــك/ي* @${mentionId.split('@')[0]}
 ╗──────¤مــعلـ🛖ـومــاتــك
 > •مــســتــواك : ${level}
-> •بــريــمــيــوم : ${user.premiumTime > 0 ? 'مــمـ🔰ـيز' : (isPrems ? 'مــمـ🔰ـيز' : 'عــ🍁ــادي') || ''}
+> •بــريــمــيــوم : ${user.premiumTime > 0 ? 'مــمـ🔰ـيز' : (isPrems ? 'مــمـ🔰ـيز' : 'عــ🦍ــادي') || ''}
 > •رتــبــتــك : ${role}
 *• ──╾⊱﹝🔰﹞⊰╼── •*
-╗───¤مــعلــومــات الــ🤖بــوت
+╗───¤مــعلــومــات الــ🦍بــوت
 > •إســم الــبــوت: روب ستارك 
 > •الــمــطــور :نقاية ويتشر
 > •مــدة الــتــشــغــيل : ${uptime}
 *• ──╾⊱﹝🔰﹞⊰╼── •*
-*~⌬ تــ✍︎ــوقــيــع ↡~*🖋️
+*~⌬ تــ✍︎ــوقــيــع ↡~*🦍
 *⌞🔰┊ 𝙍𝙊𝘽 BOT ┊🔰⌝*
 *• ──╾⊱﹝🔰﹞⊰╼── •*
 > Copyright © 2024 روب`,subtitle: "Elsony",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},
@@ -56,8 +56,8 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
                                     title: '⌈🛡╎الــقــوائـــم╎🛡⌋',
                                     sections: [
                                         {
-                                            title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام روب بـ🤖ـوت',
-                                            highlight_label: ' القائمة المفضلة 🤖',
+                                            title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام روب بـ🦍ـوت',
+                                            highlight_label: ' القائمة المفضلة 🦍',
                                             rows: [
                                                 {
                                                     header: 'الــقـ👑ـســم الـاول',
@@ -145,11 +145,11 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
                 },
                 {
               name: "quick_reply",
-              buttonParamsJson: '{"display_text":"⌈🚀╎الدردشه المجهوله╎🚀⌋","id":".chathom"}'
+              buttonParamsJson: '{"display_text":"⌈🦍╎الدردشه المجهوله╎🦍⌋","id":".chathom"}'
                      },
                      {
                name: "cta_url",
-               buttonParamsJson: '{"display_text":"⌈📲╎قـنـاة الـمـطـور╎📲⌋","url":"https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq","merchant_url":"https://chat.whatsapp.com/JRz2Z2IqhfbI10PbPE5Ydq"}'
+               buttonParamsJson: '{"display_text":"⌈🦍╎قـنـاة الـمـطـور╎🦍⌋","url":"https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90","merchant_url":"https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90"}'
                             }
                         ]
                     }
