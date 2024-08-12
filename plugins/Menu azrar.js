@@ -28,22 +28,22 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
   const Elsony = 'https://telegra.ph/file/32329ff221ac7bbb7ab7b.jpg'
   const mentionId = m.key.participant || m.key.remoteJid;
  
-conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `*• ──╾⊱﹝⚜️﹞⊰╼── •*
+conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `gataVidMenu`}, body: { text: `*• ──╾⊱﹝🔰﹞⊰╼── •*
 *مــرحــبــا بــك/ي* @${mentionId.split('@')[0]}
 ╗──────¤مــعلـ🛖ـومــاتــك
 > •مــســتــواك : ${level}
-> •بــريــمــيــوم : ${user.premiumTime > 0 ? 'مــمـ🔱ـيز' : (isPrems ? 'مــمـ🔱ـيز' : 'عــ🍁ــادي') || ''}
+> •بــريــمــيــوم : ${user.premiumTime > 0 ? 'مــمـ🔰ـيز' : (isPrems ? 'مــمـ🔰ـيز' : 'عــ🍁ــادي') || ''}
 > •رتــبــتــك : ${role}
-*• ──╾⊱﹝⚜️﹞⊰╼── •*
+*• ──╾⊱﹝🔰﹞⊰╼── •*
 ╗───¤مــعلــومــات الــ🤖بــوت
-> •إســم الــبــوت: ستيڤن 
-> •الــمــطــور :ستيڤن
+> •إســم الــبــوت: روب ستارك 
+> •الــمــطــور :نقاية ويتشر
 > •مــدة الــتــشــغــيل : ${uptime}
-*• ──╾⊱﹝⚜️﹞⊰╼── •*
+*• ──╾⊱﹝🔰﹞⊰╼── •*
 *~⌬ تــ✍︎ــوقــيــع ↡~*🖋️
-*⌞⚜️┊ス M.Z┊⚜️⌝*
-*• ──╾⊱﹝⚜️﹞⊰╼── •*
-> Copyright © 2024 ستيڤن`,subtitle: "Elsony",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},
+*⌞🔰┊ 𝙍𝙊𝘽 BOT ┊🔰⌝*
+*• ──╾⊱﹝🔰﹞⊰╼── •*
+> Copyright © 2024 روب`,subtitle: "Elsony",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},
                     contextInfo: {
                         mentionedJid: [m.sender],
                         isForwarded: false,
@@ -56,8 +56,8 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
                                     title: '⌈🛡╎الــقــوائـــم╎🛡⌋',
                                     sections: [
                                         {
-                                            title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام ستيڤن بـ🤖ـوت',
-                                            highlight_label: 'بعبص براحتك يابرو 🤖',
+                                            title: 'مــرحـ🛡ـبــا بــك فـي مــ☑هــام روب بـ🤖ـوت',
+                                            highlight_label: ' القائمة المفضلة 🤖',
                                             rows: [
                                                 {
                                                     header: 'الــقـ👑ـســم الـاول',
