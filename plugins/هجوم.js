@@ -17,7 +17,7 @@ global.db.data.users[m.sender].lastrob = new Date * 1
 }
 handler.help = ['rob']
 handler.tags = ['econ']
-handler.command = ['هجوم','زرف']
+handler.command = ['هجوم', 'اسرق']
 export default handler  
 function msToTime(duration) {
 var milliseconds = parseInt((duration % 1000) / 100),
