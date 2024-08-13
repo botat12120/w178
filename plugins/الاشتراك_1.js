@@ -51,7 +51,7 @@ const handler = async (m, { conn }) => {
                             },
                             {
                                 name: "cta_url",
-                                buttonParamsJson: '{"display_text":"⌈📲╎قـنـاة الـمـطـور╎📲⌋","url":"https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90","merchant_url":"https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90"}'
+                                buttonParamsJson: '{"display_text":"⌈📲╎قروب الـمـطـورين╎📲⌋","url":"https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90","merchant_url":"https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90"}'
                             }
                         ]
                     }
