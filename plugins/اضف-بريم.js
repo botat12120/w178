@@ -2,7 +2,7 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
   let who;
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
   else who = m.chat;
-  const textpremERROR = `*[❗] اعمل منشن للشخص الي عايز تديه بريم مؤقت و اختار الوقت*\n\n*—◉ مثل:*\n*◉ ${usedPrefix + command} @${m.sender.split`@`[0]} 1*\n*◉ ${usedPrefix + command} 1 <منشن>*`;
+  const textpremERROR = `*[❗] اعمل منشن للشخص الي تبغى تعطيه بريم مؤقت و اختار الوقت*\n\n*—◉ مثل:*\n*◉ ${usedPrefix + command} @${m.sender.split`@`[0]} 1*\n*◉ ${usedPrefix + command} 1 <منشن>*`;
   if (!who) return m.reply(textpremERROR, null, {mentions: conn.parseMention(textpremERROR)});
 
   const user = global.db.data.users[who];
