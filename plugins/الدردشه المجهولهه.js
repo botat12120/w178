@@ -30,18 +30,16 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  
 conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { header: { title: `Elsony`}, body: { text: `
 ⎔⋅• ━ ╼╃ ⌬〔﷽〕⌬ ╄╾ ━ •⋅⎔
-> Zenon↳🐢↲𝐁𝐎𝐓
+>⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝
 > 〔قـسـم الدردشه المجهوله ˼‏ 👻 〕↶
-*⌬∙ • ──╾⊱﹝⚜️﹞⊰╼── • ∙⌬*
-            *زينو🐢ن بــ🤖ــوت*
-*⌬∙ • ──╾⊱﹝⚜️﹞⊰╼── • ∙⌬*
+◉━━━─ •༺ 🔰 ༻• ─━━━◉
 > 👻 الدردشه المجهوله هي تقوم ب التحدث مع الاشخاص بسريه تامه لايظهر رقمك اثناء التحدث
 > 👻 اختر من الاسفل للبدأ
-*⌬∙ • ──╾⊱﹝⚜️﹞⊰╼── • ∙⌬*
+◉━━━─ •༺ 🔰 ༻• ─━━━◉
 *~⌬ تــ✍︎ــوقــيــع ↡~*🖋️
-*⌞⚜️┊Zenon ス M.E.Z┊⚜️⌝*
+*⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝*
 *⌬∙ • ──╾⊱﹝⚜️﹞⊰╼── • ∙⌬*
-> Copyright © 2024 ستيفن`,subtitle: "ستيفن",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},nativeFlowMessage: { buttons: [
+> Copyright © 2024 روب`,subtitle: "روب",},header: { hasMediaAttachment: true,...(await prepareWAMessageMedia({ image : { url: Elsony } }, { upload: conn.waUploadToServer }, {quoted: m}))},nativeFlowMessage: { buttons: [
 
 
                             {
