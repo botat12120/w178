@@ -82,19 +82,19 @@ throw `╮ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆
 ╮ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ╭ـ
 > 🧶 تحتاج الي ⌟${user.exp - min}/${xp}⌜ نقطة لي الارتفاع في المستوي 
 ╯ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ── ⋆⋆ ╰ـ
-> Zenon-𝐁𝐎𝐓 © 
+> 𝙍𝙊𝘽-𝐁𝐎𝐓 © 
 `.trim()}
 
 let before = user.level * 1
 while (canLevelUp(user.level, user.exp, global.multiplier)) user.level++
 if (before !== user.level) {
 let teks = `عاش! ${conn.getName(m.sender)} المستوي: ${user.level}`
-let str = `👑 Zenon-𝐁𝐎𝐓
+let str = `👑 𝙍𝙊𝘽-𝐁𝐎𝐓
 *╭━⊰ ${name}⁩ ⊱━დ*
 *┃ الـمـسـتـوي السابق: ${before}*
 *┃ الـمـسـتـوي الحالي: ${user.level}*
 *┃ رتـبــتـك:* *‎${role}*
-> Zenon-𝐁𝐎𝐓 © 
+> 𝙍𝙊𝘽-𝐁𝐎𝐓 © 
 *╰━⊰ 🎖️ مستوى جديد 🎖️ ⊱━━დ*
 
 *_لقد وصلت إلى مستوى جديد!!!_*`.trim()
