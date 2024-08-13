@@ -5,7 +5,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
   let q = m.quoted ? m.quoted : m;
   let mime = (q.msg || q).mimetype || q.mediaType || "";
   if (!mime) throw `╰⊱❗️⊱ *عمل سيء* ⊱❗️⊱╮\n\nقم بالرد علي الصوره ${usedPrefix + command}`;
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `╰⊱⚠️⊱ *𝘼𝘿𝙑𝙀𝙍𝙏𝙀𝙉𝘾𝙄𝘼 | 𝙒𝘼𝙍𝙉𝙄𝙉𝙂* ⊱⚠️⊱╮\n\nEL FORMATO DEL ARCHIVO (${mime}) NO ES COMPATIBLE, ENVÍA O RESPONDE A UNA FOTO`;
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `╰⊱⚠️⊱ *⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝* ⊱⚠️⊱╮\n\nEL FORMATO DEL ARCHIVO (${mime}) NO ES COMPATIBLE, ENVÍA O RESPONDE A UNA FOTO`;
   m.reply("*جـاري الـتـحـسـين...🐈*");
   let img = await q.download?.();
   let pr = await remini(img, "enhance");
