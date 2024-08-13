@@ -32,7 +32,7 @@ let animeingfo = `📚 *العنوان:* ${judul}
 💬 *الملخص:* ${synopsis}
 `
 conn.sendFile(m.chat, json.data[0].images.jpg.image_url, 'manga.jpg', `*معلومات المانغا*\n` + animeingfo, m)
-    conn.reply(m.chat, 'لا تنسى الدخول الي قناة المطور\nElsony\nhttps://chat.whatsapp.com/BrQVKh6Kt0X8LuMVWzW9XR', m)
+    conn.reply(m.chat, 'لا تنسى الدخول الي قروب المطور\nElsony\nhttps://chat.whatsapp.com/FtsEAx88rT983ruMP0vAwN', m)
 }
 handler.help = ['mangainfo <manga>', 'manga <namaManga>', 'infomanga <NamaManga/Anime>']
 handler.tags = ['anime']
