@@ -4,15 +4,15 @@ const { prepareWAMessageMedia } = pkg;
 const handler = async (m, { conn }) => {
     await conn.sendMessage(m.chat, { react: { text: '🚀', key: m.key } });
 
-    const Elsony = 'https://telegra.ph/file/32329ff221ac7bbb7ab7b.jpg';
+    const Elsony = 'https://telegra.ph/file/3709b122a7b1bc560f58f.jpg';
 
     let messageContent = {
         viewOnceMessage: {
             message: {
                 interactiveMessage: {
-                    header: { title: 'Elsony' },
+                    header: { title: '𝑹𝑶𝑩' },
                     body: {
-                        text: `━ ╼╃ ⌬〔﷽〕⌬ ╄╾ ━
+                        text: `◉━─ •༺ ﷽ ༻• ─━◉
 > ⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝
 > 〔 الاشتراك المجاني┊ ˼‏ 🚀˹ ↶〕
 *⋅ ───━ •﹝👑﹞• ━─── ⋅*
