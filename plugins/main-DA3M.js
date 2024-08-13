@@ -4,12 +4,9 @@ let handler = async m => m.reply(`
 
 _GROUP:_
 ─────────────
-▢ انضم إلى مجموعة البوت *العامة *
+▢ انضم إلى مجموعة البوت *العامة*
 https://chat.whatsapp.com/Ck3mQdmm0Ty3FMrJSNsG90
 ─────────────
-
-▢ *YouTube*
-• 
 
 
 `.trim())
