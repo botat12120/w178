@@ -1,38 +1,51 @@
-import uploadImage from '../lib/uploadImage.js';
-import {sticker} from '../lib/sticker.js';
-import MessageType from '@whiskeysockets/baileys';
-const effects = ['jail', 'gay', 'glass', 'wasted', 'triggered', 'lolice', 'simpcard', 'horny'];
+import { sticker } from '../lib/sticker.js'
+import uploadFile from '../lib/uploadFile.js'
+import uploadImage from '../lib/uploadImage.js'
+import { webp2png } from '../lib/webp2mp4.js'
 
-const handler = async (m, {conn, usedPrefix, text}) => {
-  const effect = text.trim().toLowerCase();
-  if (!effects.includes(effect)) {
-    throw `
-*_✳️ USO CORRECTO DEL COMANDO ✳️_*
-*👉 Use:* ${usedPrefix}stickermaker (efecto) 
-- Y responda a una imagen
-*✅ Ejemplo:* ${usedPrefix}stickermaker jail
-*List Effect:*
-${effects.map((effect) => `_> ${effect}_`).join('\n')}
-`.trim();
-  }
-  const q = m.quoted ? m.quoted : m;
-  const mime = (q.msg || q).mimetype || '';
-  if (!mime) throw '*_🔰 No se encontro la imagen_*\n\n*_✅ Responda a una imagen_*';
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `*_⚠️ Formato no admitido_*\n\n*_👉🏻 Responda a una imagen_*`;
-  const img = await q.download();
-  const url = await uploadImage(img);
-  const apiUrl = global.API('https://some-random-api.com/canvas/', encodeURIComponent(effect), {
-    avatar: url,
-  });
-  try {
-    const stiker = await sticker(null, apiUrl, global.packname, global.author);
-    conn.sendFile(m.chat, stiker, null, {asSticker: true});
-  } catch (e) {
-    m.reply('*_⚠️ Ocurrió un error al hacer la conversión a sticker_*\n\n*_✳️ Enviando imagen en su lugar..._*');
-    await conn.sendFile(m.chat, apiUrl, 'image.png', null, m);
-  }
-};
-handler.help = ['stickmaker (caption|reply media)'];
-handler.tags = ['General'];
-handler.command = /^(stickmaker|stickermaker|stickermarker|cs)$/i;
-export default handler;
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+let stiker = false
+try {
+let q = m.quoted ? m.quoted : m
+let mime = (q.msg || q).mimetype || q.mediaType || ''
+if (/webp|image|video/g.test(mime)) {
+if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply('*لا يمكن أن يزيد الفيديو عن 7 ثوانٍ*')
+let img = await q.download?.()
+
+if (!img) throw `*أجب على مقطع فيديو أو صورة أو أدخل رابط إنهاء صورة. ‏jpg والتي سيتم تحويلها إلى ملصق ، يجب عليك الإجابة أو استخدام الأمر ${usedPrefix + command}*`
+
+let out
+try {
+stiker = await sticker(img, false, global.packname, global.author)
+} catch (e) {
+console.error(e)
+} finally {
+if (!stiker) {
+if (/webp/g.test(mime)) out = await webp2png(img)
+else if (/image/g.test(mime)) out = await uploadImage(img)
+else if (/video/g.test(mime)) out = await uploadFile(img)
+if (typeof out !== 'string') out = await uploadImage(img)
+stiker = await sticker(false, out, global.packname, global.author)
+}}
+} else if (args[0]) {
+if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
+
+else return m.reply('*عنوان URL / الرابط غير صالح ، يجب أن يكون إنهاء الرابط / URL / الرابط هو ‏jpg ، على سبيل المثال .ملصق https://telegra.ph/file/5f6d20951b3930d99b306.jpg*')
+
+}
+} catch (e) {
+console.error(e)
+if (!stiker) stiker = e
+} finally {
+if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
+
+else throw '*خطأ ، يرجى المحاولة مرة أخرى. لا تنسي الرد على مقطع فيديو أو صورة أو إدراج رابط إنهاء الصورة.jpg‏ الذي سيتم تحويله الي ملصق*'
+
+}}
+handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
+handler.tags = ['sticker']
+handler.command = /^ستك|ملصق?$/i
+export default handler
+
+const isUrl = (text) => {
+return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))}
