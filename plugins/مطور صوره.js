@@ -42,7 +42,7 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isP
  `.trim();
 
 
-    conn.sendButton(m.chat, str, '𝐸𝐿𝐴𝐾𝑅𝐸𝐵', videoUrl,[[``,``]], null,[[`المطور`,`https://wa.me/201028085788`],[`القناه`,`https://whatsapp.com/channel/0029VahbMZl4tRrkdpJrCv2f`]], m);
+    conn.sendButton(m.chat, str, 'اوراهارا', videoUrl,[[``,``]], null,[[`المطور`,`https://wa.me/966570583056`],[`القروب`,`https://chat.whatsapp.com/FtsEAx88rT983ruMP0vAwN`]], m);
 };
 
 handler.help = ['مطور'];
