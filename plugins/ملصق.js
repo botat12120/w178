@@ -2,7 +2,6 @@ import { sticker } from '../lib/sticker.js'
 import uploadFile from '../lib/uploadFile.js'
 import uploadImage from '../lib/uploadImage.js'
 import { webp2png } from '../lib/webp2mp4.js'
-
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 let stiker = false
 try {
@@ -13,7 +12,7 @@ if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply('*لا ي�
 let img = await q.download?.()
 
 if (!img) throw `*أجب على مقطع فيديو أو صورة أو أدخل رابط إنهاء صورة. ‏jpg والتي سيتم تحويلها إلى ملصق ، يجب عليك الإجابة أو استخدام الأمر ${usedPrefix + command}*`
-
+  
 let out
 try {
 stiker = await sticker(img, false, global.packname, global.author)
