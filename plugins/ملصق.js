@@ -1,50 +1,37 @@
-import { sticker } from '../lib/sticker.js'
-import uploadFile from '../lib/uploadFile.js'
-import uploadImage from '../lib/uploadImage.js'
-import { webp2png } from '../lib/webp2mp4.js'
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-let stiker = false
-try {
-let q = m.quoted ? m.quoted : m
-let mime = (q.msg || q).mimetype || q.mediaType || ''
-if (/webp|image|video/g.test(mime)) {
-if (/video/g.test(mime)) if ((q.msg || q).seconds > 8) return m.reply('*لا يمكن أن يزيد الفيديو عن 7 ثوانٍ*')
-let img = await q.download?.()
+const { Client, MessageMedia } = require('whatsapp-web.js');
+const qrcode = require('qrcode-terminal');
+const sharp = require('sharp');
 
-if (!img) throw `*أجب على مقطع فيديو أو صورة أو أدخل رابط إنهاء صورة. ‏jpg والتي سيتم تحويلها إلى ملصق ، يجب عليك الإجابة أو استخدام الأمر ${usedPrefix + command}*`
-  
-let out
-try {
-stiker = await sticker(img, false, global.packname, global.author)
-} catch (e) {
-console.error(e)
-} finally {
-if (!stiker) {
-if (/webp/g.test(mime)) out = await webp2png(img)
-else if (/image/g.test(mime)) out = await uploadImage(img)
-else if (/video/g.test(mime)) out = await uploadFile(img)
-if (typeof out !== 'string') out = await uploadImage(img)
-stiker = await sticker(false, out, global.packname, global.author)
-}}
-} else if (args[0]) {
-if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
+// إنشاء البوت واتساب
+const client = new Client();
 
-else return m.reply('*عنوان URL / الرابط غير صالح ، يجب أن يكون إنهاء الرابط / URL / الرابط هو ‏jpg ، على سبيل المثال .ملصق https://telegra.ph/file/5f6d20951b3930d99b306.jpg*')
+client.on('qr', qr => {
+    qrcode.generate(qr, { small: true });
+});
 
-}
-} catch (e) {
-console.error(e)
-if (!stiker) stiker = e
-} finally {
-if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
+client.on('ready', () => {
+    console.log('WhatsApp Bot is ready!');
+});
 
-else throw '*خطأ ، يرجى المحاولة مرة أخرى. لا تنسي الرد على مقطع فيديو أو صورة أو إدراج رابط إنهاء الصورة.jpg‏ الذي سيتم تحويله الي ملصق*'
+client.on('message', async msg => {
+    if (msg.body === '.ملصق' && msg.hasMedia) {
+        const media = await msg.downloadMedia();
 
-}}
-handler.help = ['stiker (caption|reply media)', 'stiker <url>', 'stikergif (caption|reply media)', 'stikergif <url>']
-handler.tags = ['sticker']
-handler.command = /^ستك|ملصق?$/i
-export default handler
+        // تحويل الصورة إلى ملصق
+        sharp(Buffer.from(media.data, 'base64'))
+            .resize(512, 512)
+            .toFormat('png')
+            .toBuffer()
+            .then(async (data) => {
+                const sticker = new MessageMedia('image/png', data.toString('base64'));
+                client.sendMessage(msg.from, sticker, { sendMediaAsSticker: true });
+            })
+            .catch(err => {
+                console.error('Error processing the image:', err);
+            });
+    } else if (msg.body === '.ملصق') {
+        msg.reply('الرجاء إرسال صورة مع هذا الأمر لتحويلها إلى ملصق!');
+    }
+});
 
-const isUrl = (text) => {
-return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))}
+client.initialize();
