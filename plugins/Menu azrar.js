@@ -39,7 +39,7 @@ conn.relayMessage(m.chat, { viewOnceMessage: { message: { interactiveMessage: { 
 📮╎⌟ مــعلـ🔰ـومــاتــك ⌜╎📮
 > •مــســتــواك : ${level}
 > •بــريــمــيــوم : ${user.premiumTime > 0 ? 'مــمـ🔰ـيز' : (isPrems ? 'مــمـ🔰ـيز' : 'عــ🐺ــادي') || ''}
-> •رتــبــتــك : ${role}
+> •.رتــبــتــك : ${role}
 *◉━━━─⪻🔰⪼─━━━◉*
 *~⌬ تــ✍︎ــوقــيــع ↡~*🐺
 *⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝*
