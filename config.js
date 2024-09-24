@@ -114,9 +114,9 @@ global.moment = moment
 // [ES] > Agregate a ti, colaboradores o ayudates, aparecerá en el comando de lista de contactos.
 // [EN] > Adding yourself, collaborators or helpers will appear in the contact list command.
 global.official = [ // Agregate si eres Owner
-["966553211410", 'ليفاي', 1], 
-["966583621949", 'عبدالله', 1],  
-["966570583057", 'اوراهارا', 1]]
+["966553211410", '0', 1], 
+["966554406930", 'اسامة', 1],  
+["966551609722", 'اوراهارا', 1]]
 
 global.mail = '' // Add email
 global.desc = '' // Add short description (20 caractres max)
@@ -164,9 +164,9 @@ global.exito = eg
 global.wm = "روب"
 global.igfg = "⌞🔰┊ 𝑹𝑶𝑩 𝑩𝑶𝑻 ┊🔰⌝"
 global.nomorown =  [
-["966553211410", 'ليفاي', 1], 
-["966583621949", 'عبدالله', 1],  
-["966570583057", 'اوراهارا', 1]
+["966553211410", '0', 1], 
+["966554406930", 'اسامة', 1],  
+["966551609722", 'فارس', 1]
 ]
 global.pdoc = ["application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.ms-excel", "application/msword", "application/pdf", "text/rtf"]
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
